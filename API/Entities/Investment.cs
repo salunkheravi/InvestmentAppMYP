@@ -22,6 +22,11 @@ namespace API.Entities
                 
             }else if(this.InterestType.ToLower() == "compound")
             {
+                //Calculating the compound interest based on the information provided on 
+                //https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
+                currentValue = this.Principal * Math.Pow((1 + (this.InterestRate/100 ) / 12), 
+                                         (12 * (periodInMonths/12)));
+                
             }
             return Math.Round(currentValue,2);
        }

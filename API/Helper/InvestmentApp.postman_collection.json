@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "541ca88f-80ea-4dab-b215-e3971add5f49",
+		"name": "InvestmentApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11919509"
+	},
+	"item": [
+		{
+			"name": "Get Investments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/investments",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"investments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Investment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/investments/Invest3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"investments",
+						"Invest3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Investment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\":\"Invest3\",\n    \"StartDate\" : \"2019-12-25\",\n    \"InterestType\":\"Simple\",\n    \"principal\": 10000.50,\n    \"InterestRate\":8.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/investments/add-investment",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"investments",
+						"add-investment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Investment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\":\"Ravi\",\n    \"StartDate\" : \"2021-11-23\",\n    \"InterestType\":\"Compound\",\n    \"InterestRate\":5.0,\n    \"principal\": 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/investments/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"investments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Investment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/investments/Invest1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"investments",
+						"Invest1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:7090",
+			"type": "string"
+		}
+	]
+}
